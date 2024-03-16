@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
-import { SidebarLinkType } from '@/types'
 
 interface SidebarLinkProps {
   link: SidebarLinkType

@@ -1,5 +1,3 @@
-import { SidebarLinkType } from '@/types'
-
 export const navLinks: SidebarLinkType[] = [
   {
     label: 'Home',

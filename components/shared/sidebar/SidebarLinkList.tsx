@@ -1,6 +1,5 @@
 import React from 'react'
 import SidebarLink from './SidebarLink'
-import { SidebarLinkType } from '@/types'
 
 interface SidebarLinkListProps {
   links: SidebarLinkType[]
