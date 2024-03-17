@@ -2,12 +2,14 @@
 
 import { revalidatePath } from 'next/cache'
 
-import User from '../database/models/user.model'
+import User, { IUser } from '../database/models/user.model'
 import { connectToDatabase } from '../database/mongoose'
 import { handleError } from '../utils'
 
 // CREATE
-export async function createUser(user: CreateUserParams) {
+export async function createUser(
+  user: CreateUserParams
+): Promise<IUser | undefined> {
   try {
     await connectToDatabase()
 
@@ -19,7 +21,7 @@ export async function createUser(user: CreateUserParams) {
   }
 }
 
-export async function getUserById(userId: string) {
+export async function getUserById(userId: string): Promise<IUser | undefined> {
   try {
     await connectToDatabase()
 
@@ -34,7 +36,10 @@ export async function getUserById(userId: string) {
 }
 
 // UPDATE
-export async function updateUser(clerkId: string, user: UpdateUserParams) {
+export async function updateUser(
+  clerkId: string,
+  user: UpdateUserParams
+): Promise<IUser | undefined> {
   try {
     await connectToDatabase()
 
